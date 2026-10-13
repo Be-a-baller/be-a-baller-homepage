@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PROFILE｜ハレルヤ【Be a baller】</title>
+<meta name="description" content="バスケットボールコーチ・YouTuber、ハレルヤのプロフィール。1994年12月29日生まれ、神奈川県横浜市出身。NIHON TENGUS ヘッドコーチ。">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="PROFILE｜ハレルヤ【Be a baller】">
+<meta property="og:description" content="現役バスケコーチ・ハレルヤのプロフィール。">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Jost:wght@200;300;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/profile.css">
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('fx')</script>
+</head>
+<body class="pr-page">
+<script src="js/intro.js"></script>
+
+<!-- ★ プロフィールの項目は「BASIC DATA」、経歴は「CAREER」の中を書き換えるだけでOK（年齢は js/profile.js で自動計算） -->
+<!-- ★ トップの3Dストリートコート（訪れた人がシュートできるミニゲーム）は js/profile3d.js -->
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="nav-logo"><b>BE A BALLER</b><span>HALLELUJAH</span></a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav class="nav-links" id="site-nav">
+      <a href="profile.html" aria-current="page" class="is-current">PROFILE</a>
+      <a href="index.html#youtube">YOUTUBE</a>
+      <a href="index.html#coach">COACH</a>
+      <a href="index.html#workout">WORKOUT</a>
+      <a href="goods.html">GOODS</a>
+      <a href="index.html#contact">CONTACT</a>
+      <a href="index.html" class="nav-cta">← HOME</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO：3Dストリートコート（長押し→メーターの緑で離すとシュートが入る） -->
+<section class="pr-hero">
+  <p class="pr-bigword" aria-hidden="true">HALLELUJAH</p>
+  <div class="pr-stage" id="court3d" aria-hidden="true">
+    <img class="pr-fallback" src="images/profile.jpg" alt="" width="1080" height="1350">
+  </div>
+  <div class="wrap pr-hero-in">
+    <div class="pr-hero-text">
+      <p class="crumb"><a href="index.html">HOME</a><span>/</span>PROFILE</p>
+      <p class="pr-kicker">PROFILE</p>
+      <h1 class="pr-name">ハレルヤ<span>HALLELUJAH</span></h1>
+      <ul class="pf-tags">
+        <li>BASKETBALL COACH</li>
+        <li>YOUTUBER</li>
+        <li>NIHON TENGUS HC</li>
+      </ul>
+      <p class="pr-lead">現役バスケットボールコーチ。YouTubeチャンネル「ハレルヤ【Be a baller】」で、コーチの目線からバスケの裏側とリアルを発信している。</p>
+    </div>
+  </div>
+  <div class="pr-board" aria-hidden="true">
+    <p class="pr-board-main"><span>MAKES</span><b id="makes">00</b><small>/</small><b id="shots">00</b></p>
+    <p class="pr-board-sub"><span>STREAK <b id="streak">0</b></span><span>BEST <b id="best">0</b></span></p>
+  </div>
+  <div class="pr-hud" aria-hidden="true">
+    <span class="pr-scroll">SCROLL<i></i></span>
+    <span class="pr-howto"><b>HOLD &amp; RELEASE</b>長押しでジャンプ、緑で離してシュート<kbd>SPACE</kbd></span>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="pr-stats">
+  <div class="wrap stats reveal stagger">
+    <div><b>2016</b><span>COACHING SINCE</span><small>コーチ歴スタート</small></div>
+    <div><b>10.1<i>万</i></b><span>YOUTUBE</span><small>チャンネル登録者</small></div>
+    <div><b id="ageNum">--</b><span>AGE</span><small>1994.12.29 生まれ</small></div>
+    <div><b>YOKOHAMA</b><span>HOMETOWN</span><small>神奈川県横浜市</small></div>
+  </div>
+</section>
+
+<!-- BASIC DATA：立体トレカ + 表 -->
+<section class="pr-sec pr-data">
+  <div class="wrap pr-data-in">
+    <div class="pcard-wrap reveal">
+      <div class="pcard" data-tilt>
+        <span class="pcard-ph"><img src="images/profile.jpg" alt="ボールを指で回すハレルヤ" width="1080" height="1350" loading="lazy"></span>
+        <p class="pcard-top"><span>BE A BALLER</span><span>COACH</span></p>
+        <div class="pcard-bottom">
+          <p class="pcard-name">HALLELUJAH</p>
+          <p class="pcard-pos">HEAD COACH ／ YOUTUBER</p>
+        </div>
+        <img class="pcard-sign" src="images/signature.svg" alt="" aria-hidden="true" width="830" height="430">
+        <span class="pcard-foil" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="pr-data-body">
+      <header class="ph reveal">
+        <p class="ph-en">BASIC DATA</p>
+      </header>
+      <dl class="data reveal stagger">
+        <div><dt>NAME</dt><dd>高坂晴耶<small>コウサカハレルヤ</small></dd></div>
+        <div><dt>BIRTHDAY</dt><dd><time datetime="1994-12-29" id="birthday">1994年12月29日</time><small id="age"></small></dd></div>
+        <div><dt>HOMETOWN</dt><dd>神奈川県横浜市</dd></div>
+        <div><dt>JOB</dt><dd>バスケットボールコーチ / YouTuber</dd></div>
+        <div><dt>TEAM</dt><dd>NIHON TENGUS ヘッドコーチ<small>THE ASIA TOURNAMENT</small></dd></div>
+        <div><dt>MEDIA</dt><dd>STARTING 5IVE メンバー<small>NBAクリエイターによる雑談チャンネル</small></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER：コーチ経歴（COACH）と発信（MEDIA）の2本立て。スクロールでマーカーが線の上を進む -->
+<section class="pr-sec pr-career">
+  <div class="wrap">
+    <header class="ph reveal">
+      <p class="ph-en">CAREER</p>
+      <h2>経歴</h2>
+    </header>
+
+    <!-- 経歴カード右側のエンブレム（オリジナルのアイコン。公式ロゴに差し替える場合は <svg> を <img> にする） -->
+    <svg class="tl-sprite" aria-hidden="true">
+      <symbol id="ic-bleague" viewBox="0 0 64 64"><circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" stroke-width="3"/><path d="M8 26Q32 34 56 26M8 40Q32 32 56 40" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/><text x="32" y="43" text-anchor="middle" font-family="Archivo Black, sans-serif" font-size="30" fill="currentColor">B.</text></symbol>
+      <symbol id="ic-tat" viewBox="0 0 64 64"><circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" stroke-width="3"/><ellipse cx="32" cy="32" rx="12" ry="27" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".45"/><path d="M8 20h48M8 44h48" stroke="currentColor" stroke-width="1.5" opacity=".45"/><rect x="2" y="24" width="60" height="16" rx="3" fill="currentColor"/><text x="32" y="37.5" text-anchor="middle" font-family="Archivo Black, sans-serif" font-size="13" letter-spacing="1.5" fill="#0E1B15">TAT</text></symbol>
+      <symbol id="ic-univ" viewBox="0 0 64 64"><g fill="currentColor"><path d="M6 24L32 9l26 15z"/><rect x="9" y="26" width="46" height="4" rx="1"/><rect x="13" y="32" width="5" height="17"/><rect x="24" y="32" width="5" height="17"/><rect x="35" y="32" width="5" height="17"/><rect x="46" y="32" width="5" height="17"/><rect x="8" y="50" width="48" height="4" rx="1"/><rect x="5" y="55" width="54" height="4" rx="1"/></g><circle cx="32" cy="19" r="2.5" fill="#0E1B15"/></symbol>
+      <symbol id="ic-hs" viewBox="0 0 64 64"><g fill="currentColor"><path d="M22 16L32 6l10 10z"/><rect x="24" y="16" width="16" height="42"/><rect x="5" y="30" width="54" height="28" rx="1"/></g><circle cx="32" cy="23" r="5" fill="#0E1B15"/><path d="M32 20v3.5l2.5 1.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/><g fill="#0E1B15"><rect x="9" y="35" width="5" height="6"/><rect x="17" y="35" width="5" height="6"/><rect x="42" y="35" width="5" height="6"/><rect x="50" y="35" width="5" height="6"/><rect x="9" y="46" width="5" height="6"/><rect x="17" y="46" width="5" height="6"/><rect x="42" y="46" width="5" height="6"/><rect x="50" y="46" width="5" height="6"/><rect x="28" y="46" width="8" height="12" rx="4" ry="4"/></g></symbol>
+      <symbol id="ic-skill" viewBox="0 0 64 64"><g fill="currentColor"><circle cx="25" cy="38" r="15"/><path d="M25 23h31v12H33z"/></g><circle cx="25" cy="38" r="6" fill="#0E1B15"/><circle cx="12" cy="20" r="5" fill="none" stroke="currentColor" stroke-width="3"/></symbol>
+      <symbol id="ic-yt" viewBox="0 0 64 64"><rect x="4" y="13" width="56" height="38" rx="12" fill="currentColor"/><path d="M27 23v18l15-9z" fill="#0E1B15"/></symbol>
+    </svg>
+
+    <p class="tl-track reveal"><b>COACH</b>コーチ</p>
+    <div class="tl">
+      <div class="tl-lane" aria-hidden="true">
+        <svg class="tl-ball" data-roll viewBox="0 0 100 100">
+          <defs><radialGradient id="tlb" cx="36%" cy="30%" r="75%"><stop offset="0" stop-color="#F8A65E"/><stop offset=".5" stop-color="#E2712A"/><stop offset="1" stop-color="#8A3507"/></radialGradient></defs>
+          <circle cx="50" cy="50" r="48" fill="url(#tlb)"/>
+          <g fill="none" stroke="#1C0D04" stroke-width="3" stroke-linecap="round"><path d="M2 50Q50 62 98 50M50 2Q38 50 50 98M17 12Q44 50 17 88M83 12Q56 50 83 88"/></g>
+        </svg>
+      </div>
+      <ol class="tl-list">
+        <li class="tl-item reveal">
+          <p class="tl-year">2016<span>–</span><em>NOW</em></p>
+          <div class="tl-card">
+            <div class="tl-body">
+              <p class="tl-role">SKILL COACH</p>
+              <h3>スキルコーチ事業</h3>
+              <p class="tl-live"><i></i>ON GOING</p>
+            </div>
+            <span class="tl-badge tl-badge-skill"><svg aria-hidden="true"><use href="#ic-skill"/></svg><small>SKILLS</small></span>
+          </div>
+        </li>
+        <li class="tl-item reveal">
+          <p class="tl-year">2021<span>–</span>22</p>
+          <div class="tl-card">
+            <div class="tl-body">
+              <p class="tl-role">HEAD COACH</p>
+              <h3>香川大学</h3>
+              <p class="tl-ja">ヘッドコーチ<span class="tl-also">兼 スキルコーチ</span></p>
+            </div>
+            <span class="tl-badge tl-badge-univ"><svg aria-hidden="true"><use href="#ic-univ"/></svg><small>UNIVERSITY</small></span>
+          </div>
+        </li>
+        <li class="tl-item reveal">
+          <p class="tl-year">2022<span>–</span>23</p>
+          <div class="tl-card">
+            <div class="tl-body">
+              <p class="tl-role">DEFENSIVE COORDINATOR</p>
+              <h3>北陸大学</h3>
+              <p class="tl-ja">ディフェンスコーディネーター<span class="tl-also">兼 スキルコーチ</span></p>
+            </div>
+            <span class="tl-badge tl-badge-univ"><svg aria-hidden="true"><use href="#ic-univ"/></svg><small>UNIVERSITY</small></span>
+          </div>
+        </li>
+        <li class="tl-item reveal">
+          <p class="tl-year">2023<span>–</span>24</p>
+          <div class="tl-card">
+            <div class="tl-body">
+              <p class="tl-role">OFFENSIVE COORDINATOR</p>
+              <h3>小松大谷高校</h3>
+              <p class="tl-ja">オフェンスコーディネーター<span class="tl-also">兼 スキルコーチ</span></p>
+            </div>
+            <span class="tl-badge tl-badge-hs"><svg aria-hidden="true"><use href="#ic-hs"/></svg><small>HIGH SCHOOL</small></span>
+          </div>
+        </li>
+        <li class="tl-item reveal">
+          <p class="tl-year">2023<span>–</span>24</p>
+          <div class="tl-card">
+            <div class="tl-body">
+              <p class="tl-role">ASSISTANT COACH</p>
+              <h3>金沢武士団</h3>
+              <p class="tl-ja">アシスタントコーチ（インターン）<span class="tl-also">兼 スキルコーチ</span></p>
+            </div>
+            <span class="tl-badge tl-badge-bleague"><svg aria-hidden="true"><use href="#ic-bleague"/></svg><small>B.LEAGUE</small></span>
+          </div>
+        </li>
+        <li class="tl-item reveal">
+          <p class="tl-year">2024<span>–</span>25</p>
+          <div class="tl-card">
+            <div class="tl-body">
+              <p class="tl-role">SCOUTING COACH</p>
+              <h3>さいたまブロンコス</h3>
+              <p class="tl-ja">スカウティングコーチ<span class="tl-also">兼 スキルコーチ</span></p>
+            </div>
+            <span class="tl-badge tl-badge-bleague"><svg aria-hidden="true"><use href="#ic-bleague"/></svg><small>B.LEAGUE</small></span>
+          </div>
+        </li>
+        <li class="tl-item reveal">
+          <p class="tl-year">2026<span>–</span><em>NOW</em></p>
+          <div class="tl-card">
+            <div class="tl-body">
+              <p class="tl-role">HEAD COACH</p>
+              <h3>ニホンテングス</h3>
+              <p class="tl-ja">ヘッドコーチ<span class="tl-also">兼 スキルコーチ</span></p>
+              <p class="tl-live"><i></i>ON GOING</p>
+            </div>
+            <span class="tl-badge tl-badge-tat" title="THE ASIA TOURNAMENT"><svg aria-hidden="true"><use href="#ic-tat"/></svg><small>TAT</small></span>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <p class="tl-track tl-track-media reveal"><b>MEDIA</b>発信</p>
+    <div class="tl tl-media">
+      <div class="tl-lane" aria-hidden="true">
+        <svg class="tl-ball" viewBox="0 0 100 100">
+          <rect x="4" y="16" width="92" height="68" rx="20" fill="#FF3B30"/>
+          <path d="M41 34v32l27-16z" fill="#fff"/>
+        </svg>
+      </div>
+      <ol class="tl-list">
+        <li class="tl-item reveal">
+          <p class="tl-year">2017<span>–</span><em>NOW</em></p>
+          <div class="tl-card">
+            <div class="tl-body">
+              <p class="tl-role">YOUTUBE</p>
+              <h3>ハレルヤ【Be a baller】</h3>
+              <p class="tl-ja">YouTubeチャンネル</p>
+              <p class="tl-subs"><b>10.1</b>万人<span>登録者</span></p>
+              <p class="tl-live"><i></i>ON GOING</p>
+            </div>
+            <span class="tl-badge tl-badge-yt"><svg aria-hidden="true"><use href="#ic-yt"/></svg><small>YOUTUBE</small></span>
+          </div>
+        </li>
+        <li class="tl-item reveal">
+          <p class="tl-year">2024<span>–</span><em>NOW</em></p>
+          <div class="tl-card">
+            <div class="tl-body">
+              <p class="tl-role">GROUP YOUTUBE</p>
+              <h3>STARTING 5IVE</h3>
+              <p class="tl-ja">グループYouTubeチャンネル</p>
+              <p class="tl-subs"><b>2.5</b>万人<span>登録者</span></p>
+              <p class="tl-live"><i></i>ON GOING</p>
+            </div>
+            <span class="tl-badge tl-badge-yt"><svg aria-hidden="true"><use href="#ic-yt"/></svg><small>GROUP</small></span>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- CLINIC：スキルクリニック・キャンプの実績。カードをクリックすると概要が開く（概要は各カードの camp-detail を書き換え） -->
+<section class="pr-sec pr-clinic">
+  <div class="wrap">
+    <header class="ph reveal">
+      <p class="ph-en">CLINIC</p>
+      <h2>スキルクリニック実績</h2>
+    </header>
+    <div class="camps reveal stagger">
+      <button class="camp" type="button" data-camp="be5ive">
+        <span class="camp-no">01</span>
+        <svg class="camp-ic" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4l25 14v28L32 60 7 46V18z" fill="none" stroke="currentColor" stroke-width="3"/><text x="32" y="43" text-anchor="middle" font-family="Anton, sans-serif" font-size="30" fill="currentColor">5</text></svg>
+        <span class="camp-en">BE 5IVE CAMP</span>
+        <span class="camp-ja">Be 5ive Camp</span>
+        <span class="camp-st"><i></i>開催実績あり</span>
+        <span class="camp-go">概要を見る<i>+</i></span>
+        <!-- ↓クリックで開く概要（ここを書き換える） -->
+        <span class="camp-detail" hidden>
+          <span data-f="lead">概要は準備中です。</span>
+          <span data-f="対象">準備中</span>
+          <span data-f="内容">準備中</span>
+          <span data-f="開催地">準備中</span>
+          <span data-f="実績">準備中</span>
+          <span data-f="link"></span><!-- 詳細ページができたら URL を入れる（例: camp-defense.html） -->
+        </span>
+      </button>
+      <button class="camp" type="button" data-camp="overseas">
+        <span class="camp-no">02</span>
+        <svg class="camp-ic" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="26" fill="none" stroke="currentColor" stroke-width="3"/><ellipse cx="32" cy="32" rx="11" ry="26" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 32h52M10 19h44M10 45h44" stroke="currentColor" stroke-width="2"/></svg>
+        <span class="camp-en">OVERSEAS CAMP</span>
+        <span class="camp-ja">海外キャンプ</span>
+        <span class="camp-st"><i></i>開催実績あり</span>
+        <span class="camp-go">概要を見る<i>+</i></span>
+        <!-- ↓クリックで開く概要（ここを書き換える） -->
+        <span class="camp-detail" hidden>
+          <span data-f="lead">概要は準備中です。</span>
+          <span data-f="対象">準備中</span>
+          <span data-f="内容">準備中</span>
+          <span data-f="開催地">準備中</span>
+          <span data-f="実績">準備中</span>
+          <span data-f="link"></span><!-- 詳細ページができたら URL を入れる（例: camp-defense.html） -->
+        </span>
+      </button>
+      <button class="camp is-soon" type="button" data-camp="offense">
+        <span class="camp-no">03</span>
+        <svg class="camp-ic" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="25" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="32" cy="32" r="15" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="32" cy="32" r="5" fill="currentColor"/></svg>
+        <span class="camp-en">OFFENSE CAMP</span>
+        <span class="camp-ja">オフェンスキャンプ</span>
+        <span class="camp-st is-soon">COMING SOON</span>
+        <span class="camp-go">概要を見る<i>+</i></span>
+        <!-- ↓クリックで開く概要（ここを書き換える） -->
+        <span class="camp-detail" hidden>
+          <span data-f="lead">近日開催予定。概要は決まりしだい公開します。</span>
+          <span data-f="対象">準備中</span>
+          <span data-f="内容">準備中</span>
+          <span data-f="開催地">準備中</span>
+          <span data-f="実績">—</span>
+          <span data-f="link"></span><!-- 詳細ページができたら URL を入れる（例: camp-defense.html） -->
+        </span>
+      </button>
+      <button class="camp" type="button" data-camp="defense">
+        <span class="camp-no">04</span>
+        <svg class="camp-ic" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 5l23 8v17c0 14-10 24-23 29C19 54 9 44 9 30V13z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M22 31l7 7 13-14" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="camp-en">DEFENSE CAMP</span>
+        <span class="camp-ja">ディフェンスキャンプ</span>
+        <span class="camp-st"><i></i>開催実績あり</span>
+        <span class="camp-go">概要を見る<i>+</i></span>
+        <!-- ↓クリックで開く概要（ここを書き換える） -->
+        <span class="camp-detail" hidden>
+          <span data-f="lead">概要は準備中です。</span>
+          <span data-f="対象">準備中</span>
+          <span data-f="内容">準備中</span>
+          <span data-f="開催地">準備中</span>
+          <span data-f="実績">準備中</span>
+          <span data-f="link"></span><!-- 詳細ページができたら URL を入れる（例: camp-defense.html） -->
+        </span>
+      </button>
+      <button class="camp is-soon" type="button" data-camp="skill">
+        <span class="camp-no">05</span>
+        <svg class="camp-ic" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6l16 44H16z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M21 36h22M26 22h12" stroke="currentColor" stroke-width="3"/><rect x="8" y="50" width="48" height="6" rx="2" fill="currentColor"/></svg>
+        <span class="camp-en">SKILL CAMP</span>
+        <span class="camp-ja">スキルキャンプ</span>
+        <span class="camp-st is-soon">COMING SOON</span>
+        <span class="camp-go">概要を見る<i>+</i></span>
+        <!-- ↓クリックで開く概要（ここを書き換える） -->
+        <span class="camp-detail" hidden>
+          <span data-f="lead">近日開催予定。概要は決まりしだい公開します。</span>
+          <span data-f="対象">準備中</span>
+          <span data-f="内容">準備中</span>
+          <span data-f="開催地">準備中</span>
+          <span data-f="実績">—</span>
+          <span data-f="link"></span><!-- 詳細ページができたら URL を入れる（例: camp-defense.html） -->
+        </span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- キャンプの概要（ポップアップ） -->
+<dialog class="camp-modal" id="campModal" aria-labelledby="campTitle">
+  <button class="camp-close" type="button" aria-label="閉じる">✕</button>
+  <p class="camp-m-no"></p>
+  <h3 class="camp-m-en" id="campTitle"></h3>
+  <p class="camp-m-ja"></p>
+  <p class="camp-m-lead"></p>
+  <dl class="camp-m-data"></dl>
+  <a class="btn primary camp-m-link">詳細ページへ →</a>
+</dialog>
+
+<!-- ACTIVITIES -->
+<section class="pr-sec pr-act">
+  <div class="wrap">
+    <header class="ph reveal">
+      <p class="ph-en">ACTIVITIES</p>
+      <h2>コーチとして、発信者として。</h2>
+    </header>
+    <div class="acts reveal stagger">
+      <a class="act" href="index.html#youtube" data-tilt>
+        <span class="no">01</span>
+        <span class="en">YOUTUBE</span>
+        <h3>ハレルヤ【Be a baller】</h3>
+        <p>登録者 10.1万人。コーチの目線から、バスケの裏側とリアルを発信。</p>
+        <span class="go">動画を見る →</span>
+      </a>
+      <a class="act" href="index.html#coach" data-tilt>
+        <span class="no">02</span>
+        <span class="en">HEAD COACH</span>
+        <h3>ニホンテングス</h3>
+        <p>THE ASIA TOURNAMENT に挑む日本チームのヘッドコーチ。密着ドキュメンタリーも公開中。</p>
+        <span class="go">チームを見る →</span>
+      </a>
+      <a class="act" href="https://sixten.jp/media/starting5ive.html" target="_blank" rel="noopener" data-tilt>
+        <span class="no">03</span>
+        <span class="en">STARTING 5IVE</span>
+        <h3>NBAクリエイターの雑談チャンネル</h3>
+        <p>メンバーとして、NBAトークを配信中。</p>
+        <span class="go">STARTING 5IVE →</span>
+      </a>
+      <a class="act" href="index.html#workout" data-tilt>
+        <span class="no">04</span>
+        <span class="en">WORKOUT</span>
+        <h3>コートで、直接教える</h3>
+        <p>パーソナルからチーム、イベントまで。現役コーチによるワークアウト。</p>
+        <span class="go">ワークアウトを見る →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="pr-cta">
+  <div class="wrap pr-cta-in reveal">
+    <p class="pr-cta-en">LET'S<br>WORK TOGETHER</p>
+    <div>
+      <p>お仕事のご依頼・ご相談はこちらから。</p>
+      <a class="btn primary" href="index.html#contact">お問い合わせ →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p class="footer-logo">BE A BALLER</p>
+    <p class="copy">© <span id="year">2026</span> ハレルヤ【Be a baller】</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js" defer></script>
+<script src="js/profile3d.js" defer></script>
+<script src="js/profile.js"></script>
+</body>
+</html>

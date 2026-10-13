@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TEAM OFFENSE｜ハレルヤ【Be a baller】</title>
+<meta name="description" content="現役バスケコーチ・ハレルヤによるチームオフェンスの指導。単発 3時間 55,000円、半年プラン 300,000円、1年プラン 550,000円。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TEAM OFFENSE｜ハレルヤ【Be a baller】">
+<meta property="og:description" content="単発 3時間 55,000円から。部活・クラブチームへの出張指導。">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,700;0,800;1,800&family=JetBrains+Mono:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/workout.css">
+</head>
+<body class="t-offense">
+
+<!-- ★ 料金・プランは js/team.js 冒頭の TEAM_PLANS で設定（オフェンス・ディフェンス共通） -->
+
+<header class="bar">
+  <a class="bar-back" href="index.html#workout"><span aria-hidden="true">←</span> BE A BALLER</a>
+  <span class="bar-title">TEAM OFFENSE</span>
+  <a class="bar-cta" href="#apply">申し込む</a>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="court" viewBox="0 0 600 560" aria-hidden="true">
+    <rect x="1" y="1" width="598" height="558" />
+    <rect x="200" y="1" width="200" height="290" />
+    <circle cx="300" cy="291" r="100" />
+    <path d="M60 1 V140 A240 240 0 0 0 540 140 V1" />
+    <circle cx="300" cy="64" r="12" />
+    <path d="M270 46 H330" />
+  </svg>
+  <div class="hero-in">
+    <div class="hero-text">
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span>HALLELUJAH / BE A BALLER</p>
+      <h1 class="hero-title"><span>TEAM</span><span class="out">OFFENSE</span></h1>
+      <p class="hero-ja">チームオフェンス</p>
+      <p class="hero-lead">チームで点を取るためのオフェンスを、現役コーチが直接指導します。部活・クラブチームへの出張指導にも対応します。</p>
+      <dl class="spec">
+        <div><dt>PLAN</dt><dd>単発 / 半年 / 1年</dd></div>
+        <div><dt>SINGLE</dt><dd><b>180</b>min</dd></div>
+        <div><dt>FROM</dt><dd><b>¥55,000</b></dd></div>
+      </dl>
+    </div>
+    <figure class="hero-photo">
+      <img src="images/workout-offense.jpg" alt="選手たちにオフェンスを指導するハレルヤ" width="1400" height="933" style="--pos: 16% 60%">
+      <figcaption>COACH HALLELUJAH</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="price" id="price">
+  <div class="sec-head">
+    <p class="sec-no">PRICE</p>
+    <h2>3つのプラン<small>チーム単位の料金</small></h2>
+  </div>
+
+  <div class="tiers tiers-3" id="plans" role="radiogroup" aria-label="プランを選ぶ"></div>
+
+  <div class="calc" aria-labelledby="calc-title">
+    <div class="calc-in">
+      <p class="calc-title" id="calc-title">プランを選ぶ</p>
+      <div class="seg" id="seg" role="radiogroup" aria-label="プラン"></div>
+      <div class="calc-row"><span class="calc-lbl">内容</span><span class="calc-val" id="d-content"></span></div>
+      <div class="calc-row"><span class="calc-lbl">合計時間</span><span class="calc-val" id="d-hours"></span></div>
+    </div>
+    <div class="calc-out" aria-live="polite">
+      <div><span>1回あたり</span><b id="d-per"></b></div>
+      <div><span>1時間あたり</span><b id="d-hour"></b></div>
+      <div class="total"><span id="d-name">料金</span><b id="d-price"></b></div>
+      <p class="calc-note">＋ 交通費・宿泊費・体育館代（実費）</p>
+    </div>
+  </div>
+
+  <ul class="notes">
+    <li><b>01</b><span>半年プラン・1年プランは、月1回・4時間（午前2時間・午後2時間）の指導です。</span></li>
+    <li><b>02</b><span>交通費・宿泊費・体育館代は別途いただきます。</span></li>
+  </ul>
+</section>
+
+<!-- APPLY -->
+<section class="apply" id="apply">
+  <div class="apply-in">
+    <p class="sec-no">APPLY</p>
+    <h2>まずは、気軽に相談から。</h2>
+    <p>チーム名・人数・希望のプラン・開催地・いまの課題を書いて送ってください。</p>
+    <div class="apply-actions">
+      <a class="apply-btn" href="index.html#contact">お問い合わせフォームへ <span aria-hidden="true">→</span></a>
+      <div class="apply-mail">
+        <span class="mono" id="mail">be.a.baller.official@gmail.com</span>
+        <button type="button" id="copy">コピー</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <a href="index.html">BE A BALLER</a>
+  <span>© <span id="year">2026</span> ハレルヤ【Be a baller】</span>
+</footer>
+
+<script src="js/team.js"></script>
+</body>
+</html>

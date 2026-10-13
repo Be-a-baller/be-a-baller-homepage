@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PERSONAL WORKOUT｜ハレルヤ【Be a baller】</title>
+<meta name="description" content="現役バスケコーチ・ハレルヤのパーソナルワークアウト。単発プラン 2時間・1人 11,000円から。人数が増えるほど1人あたりの料金がお得に。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PERSONAL WORKOUT｜ハレルヤ【Be a baller】">
+<meta property="og:description" content="単発プラン 2時間・1人 11,000円から。">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,700;0,800;1,800&family=JetBrains+Mono:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/workout.css">
+</head>
+<body class="t-personal">
+
+<!-- ★ 料金は js/personal.js 冒頭の PLAN で設定（ページ内の料金表と計算機の両方に反映） -->
+
+<header class="bar">
+  <a class="bar-back" href="index.html#workout"><span aria-hidden="true">←</span> BE A BALLER</a>
+  <span class="bar-title">PERSONAL WORKOUT</span>
+  <a class="bar-cta" href="#apply">申し込む</a>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="court" viewBox="0 0 600 560" aria-hidden="true">
+    <rect x="1" y="1" width="598" height="558" />
+    <rect x="200" y="1" width="200" height="290" />
+    <circle cx="300" cy="291" r="100" />
+    <path d="M60 1 V140 A240 240 0 0 0 540 140 V1" />
+    <circle cx="300" cy="64" r="12" />
+    <path d="M270 46 H330" />
+  </svg>
+  <div class="hero-in">
+    <div class="hero-text">
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span>HALLELUJAH / BE A BALLER</p>
+      <h1 class="hero-title"><span>PERSONAL</span><span class="out">WORKOUT</span></h1>
+      <p class="hero-ja">パーソナルワークアウト</p>
+      <p class="hero-lead">現役コーチが、マンツーマンであなたの課題に合わせたスキル・ワークアウトを組みます。シュート、ハンドリング、フィニッシュまで。</p>
+      <dl class="spec">
+        <div><dt>PLAN</dt><dd>単発プラン</dd></div>
+        <div><dt>TIME</dt><dd><b>120</b>min</dd></div>
+        <div><dt>FROM</dt><dd><b>¥7,000</b>/人</dd></div>
+      </dl>
+    </div>
+    <figure class="hero-photo">
+      <img src="images/workout-personal.jpg" alt="パーソナルワークアウトで指導するハレルヤ" width="1000" height="1000">
+      <figcaption>COACH HALLELUJAH</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="price" id="price">
+  <div class="sec-head">
+    <p class="sec-no">PRICE</p>
+    <h2>単発プラン<small>2時間 / 1人あたりの料金</small></h2>
+  </div>
+
+  <div class="tiers" id="tiers" role="radiogroup" aria-label="人数を選ぶ"></div>
+
+  <div class="calc" aria-labelledby="calc-title">
+    <div class="calc-in">
+      <p class="calc-title" id="calc-title">料金シミュレーター</p>
+      <div class="calc-row">
+        <span class="calc-lbl">人数</span>
+        <div class="stepper">
+          <button type="button" id="minus" aria-label="人数を減らす">−</button>
+          <output id="people" aria-live="polite">1</output><span class="stepper-unit">人</span>
+          <button type="button" id="plus" aria-label="人数を増やす">＋</button>
+        </div>
+      </div>
+      <label class="calc-row toggle">
+        <span class="calc-lbl">開催地が東京都・神奈川県の外</span>
+        <input type="checkbox" id="far">
+        <span class="switch" aria-hidden="true"></span>
+      </label>
+    </div>
+    <div class="calc-out" aria-live="polite">
+      <div><span>1人あたり</span><b id="per">¥11,000</b></div>
+      <div class="total"><span>合計</span><b id="total">¥11,000</b></div>
+      <p class="calc-note">＋ 交通費・体育館代（実費）</p>
+    </div>
+  </div>
+
+  <ul class="notes">
+    <li><b>01</b><span>料金は2時間・1人あたりの金額です。</span></li>
+    <li><b>02</b><span>交通費・体育館代は別途いただきます。</span></li>
+    <li><b>03</b><span>東京都・神奈川県以外での開催は、プラス <span class="mono">¥10,000</span> です。</span></li>
+  </ul>
+</section>
+
+<!-- APPLY -->
+<section class="apply" id="apply">
+  <div class="apply-in">
+    <p class="sec-no">APPLY</p>
+    <h2>まずは、気軽に相談から。</h2>
+    <p>希望の日時・場所・人数・いまの課題を書いて送ってください。</p>
+    <div class="apply-actions">
+      <a class="apply-btn" href="index.html#contact">お問い合わせフォームへ <span aria-hidden="true">→</span></a>
+      <div class="apply-mail">
+        <span class="mono" id="mail">be.a.baller.official@gmail.com</span>
+        <button type="button" id="copy">コピー</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <a href="index.html">BE A BALLER</a>
+  <span>© <span id="year">2026</span> ハレルヤ【Be a baller】</span>
+</footer>
+
+<script src="js/personal.js"></script>
+</body>
+</html>
