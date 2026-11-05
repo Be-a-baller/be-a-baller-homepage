@@ -212,11 +212,11 @@
       <div class="ch-top"><span class="n">04</span><span class="en">GOODS</span></div>
       <div class="ch-sub"><h2>Be a baller を、着る。</h2></div>
     </header>
-    <a class="goods reveal" href="goods.html" aria-label="オフィシャルストアを見る">
+    <a class="goods reveal" href="goods.html" aria-label="オフィシャルグッズのラインナップを見る">
       <img src="images/goods-2.jpg" alt="バスケットボールをドリブルするイラスト" width="1400" height="590" loading="lazy">
-      <span class="go">ストアを見る →</span>
+      <span class="go">ラインナップを見る →</span>
     </a>
-    <p class="goods-note reveal"><span class="tag">OFFICIAL STORE</span>Tシャツ、フーディー、練習着など、オリジナルグッズを販売中。</p>
+    <p class="goods-note reveal"><span class="tag">COMING SOON</span>Tシャツ、フーディー、練習着など、オリジナルグッズを準備中。販売開始はYouTube・SNSでお知らせします。</p>
   </div>
 </section>
 
@@ -231,7 +231,7 @@
       <div id="sponsor-main"></div>
       <div id="sponsor-subs" class="sp-subs"></div>
     </div>
-    <p class="sp-cta reveal">YouTube・NIHON TENGUS・ワークアウト事業を一緒に盛り上げてくれるスポンサーを募集しています。<a href="#contact" data-topic="スポンサーについて">スポンサーのご相談はこちら →</a></p>
+    <p class="sp-cta reveal">YouTube・NIHON TENGUS・ワークアウト事業を一緒に盛り上げてくれるスポンサーを募集しています。<a href="#contact" data-topic="sponsor">スポンサーのご相談はこちら →</a></p>
   </div>
 </section>
 
@@ -246,32 +246,67 @@
       <p>ご質問やご相談など、お気軽にお問い合わせください。</p>
       <div class="contact-grid">
         <form class="contact-form" id="contact-form" novalidate>
+          <label><span class="ft">お問い合わせの種類<span class="req">必須</span></span>
+            <select name="topic" required>
+              <optgroup label="ワークアウトのお申し込み・ご相談">
+                <option value="personal">パーソナルワークアウト</option>
+                <option value="team-offense">チームワークアウト（オフェンス）</option>
+                <option value="team-defense">チームワークアウト（ディフェンス）</option>
+                <option value="event">イベント・クリニックのご依頼</option>
+              </optgroup>
+              <optgroup label="その他のお問い合わせ">
+                <option value="sponsor">スポンサーについて</option>
+                <option value="business">企業案件・コラボ・講演</option>
+                <option value="goods">グッズについて</option>
+                <option value="other" selected>その他</option>
+              </optgroup>
+            </select>
+          </label>
           <label><span class="ft">お名前<span class="req">必須</span></span>
             <input type="text" name="name" autocomplete="name" required>
           </label>
           <label><span class="ft">メールアドレス<span class="req">必須</span></span>
             <input type="email" name="email" autocomplete="email" required>
           </label>
-          <label><span class="ft">お問い合わせの種類</span>
-            <select name="topic">
-              <option>スポンサーについて</option>
-              <option>企業案件・コラボ・講演</option>
-              <option>グッズについて</option>
-              <option selected>その他</option>
-            </select>
-          </label>
+          <!-- ワークアウト・イベントを選んだときだけ表示 -->
+          <fieldset class="wo-fields" hidden>
+            <legend>ワークアウトの詳細<small>わかる範囲でご記入ください</small></legend>
+            <label class="for-team"><span class="ft">チーム名・団体名</span>
+              <input type="text" name="team" autocomplete="organization">
+            </label>
+            <div class="row">
+              <label><span class="ft">参加人数</span>
+                <input type="text" name="people" inputmode="numeric" placeholder="例：1人 / 15人">
+              </label>
+              <label><span class="ft">開催希望地</span>
+                <input type="text" name="place" placeholder="例：横浜市 / 〇〇高校体育館">
+              </label>
+            </div>
+            <label class="for-team"><span class="ft">希望のプラン</span>
+              <select name="plan">
+                <option value="">未定・相談したい</option>
+                <option>単発プラン</option>
+                <option>半年プラン</option>
+                <option>1年プラン</option>
+              </select>
+            </label>
+            <label><span class="ft">希望の日時</span>
+              <input type="text" name="date" placeholder="例：11月の土日の午前 / 12/14(日) 10:00〜">
+            </label>
+          </fieldset>
           <label><span class="ft">お問い合わせ内容<span class="req">必須</span></span>
-            <textarea name="message" rows="6" required></textarea>
+            <textarea name="message" rows="6" required placeholder=""></textarea>
           </label>
-          <p class="form-error" role="alert" hidden>お名前・メールアドレス・お問い合わせ内容を入力してください。</p>
-          <button type="submit" class="btn primary">メールを作成して送る →</button>
-          <p class="form-note">送信ボタンを押すと、入力内容が入った状態でメールアプリが開きます。</p>
+          <!-- スパム対策（人には見えない欄。入力があれば送信しない） -->
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <p class="form-error" role="alert" hidden></p>
+          <button type="submit" class="btn primary">送信する →</button>
+          <p class="form-note">内容を確認のうえ、ご入力いただいたメールアドレスへご連絡します。</p>
         </form>
-        <div class="mail-card">
-          <span class="lbl">MAIL</span>
-          <a class="mail-addr" href="mailto:be.a.baller.official@gmail.com">be.a.baller.official@gmail.com</a>
-          <button type="button" class="copy-btn" data-copy="be.a.baller.official@gmail.com">アドレスをコピー</button>
-          <p>メールアプリが開かない場合は、上のアドレスに直接お送りください。</p>
+        <div class="form-done" id="form-done" role="status" tabindex="-1" hidden>
+          <span class="lbl">THANK YOU</span>
+          <p class="big">お問い合わせを受け付けました。</p>
+          <p>内容を確認のうえ、ご入力いただいたメールアドレスへご連絡します。数日たっても返信がない場合は、お手数ですが迷惑メールフォルダをご確認ください。</p>
         </div>
       </div>
       <p class="sns-label">SNS</p>

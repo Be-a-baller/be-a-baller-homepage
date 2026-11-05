@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OFFICIAL STORE｜ハレルヤ【Be a baller】</title>
-<meta name="description" content="ハレルヤ【Be a baller】のオフィシャルグッズストア。Tシャツ、フーディー、ソックス、キャップなど。">
+<meta name="description" content="ハレルヤ【Be a baller】のオフィシャルグッズ。Tシャツ、フーディー、ソックス、キャップなど（近日販売開始予定）。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="OFFICIAL STORE｜ハレルヤ【Be a baller】">
-<meta property="og:description" content="Be a baller を、着る。オフィシャルグッズ販売中。">
+<meta property="og:description" content="Be a baller を、着る。オフィシャルグッズ近日販売開始。">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Noto+Sans+JP:wght@400;500;700;900&family=Permanent+Marker&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/goods.css">
+<link rel="stylesheet" href="css/goods.css?v=2">
 <script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('fx')</script>
 </head>
 <body>
@@ -44,7 +44,7 @@
   <div class="wrap">
     <p class="crumb"><a href="index.html">HOME</a><span>/</span>GOODS</p>
     <header class="ch">
-      <div class="ch-top"><span class="en">OFFICIAL STORE</span></div>
+      <div class="ch-top"><span class="en">OFFICIAL STORE</span><span class="soon-tag">COMING SOON</span></div>
       <div class="ch-sub"><span class="ja">オフィシャルグッズ</span><h1>Be a baller を、着る。</h1></div>
     </header>
     <figure class="shop-visual">
@@ -52,15 +52,45 @@
       <figcaption>Be a baller.</figcaption>
     </figure>
     <p class="shop-lead">コートでも、街でも。Be a baller のオリジナルグッズ。<br class="pc">練習着としても普段着としても使えるアイテムをそろえました。</p>
+    <ul class="assure">
+      <li><b>3D FIT</b><span>あなたの体型のマネキンに着せて、サイズ感を確認</span></li>
+      <li><b>MY SIZE</b><span>身長・体重から、全アイテムのおすすめサイズを表示</span></li>
+      <li><b>SIZE CHART</b><span>実寸サイズ表と、手持ちの服との比較</span></li>
+    </ul>
   </div>
 </section>
 
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
-    <span>NEW ARRIVALS</span><span>BE A BALLER</span><span>OFFICIAL GOODS</span><span>NEW ARRIVALS</span><span>BE A BALLER</span><span>OFFICIAL GOODS</span>
-    <span>NEW ARRIVALS</span><span>BE A BALLER</span><span>OFFICIAL GOODS</span><span>NEW ARRIVALS</span><span>BE A BALLER</span><span>OFFICIAL GOODS</span>
+    <span>COMING SOON</span><span>BE A BALLER</span><span>OFFICIAL GOODS</span><span>COMING SOON</span><span>BE A BALLER</span><span>OFFICIAL GOODS</span>
+    <span>COMING SOON</span><span>BE A BALLER</span><span>OFFICIAL GOODS</span><span>COMING SOON</span><span>BE A BALLER</span><span>OFFICIAL GOODS</span>
   </div>
 </div>
+
+<!-- サイズ診断（MY SIZE） -->
+<section class="sec fit" id="fit">
+  <div class="wrap fit-grid">
+    <div class="fit-copy">
+      <header class="ch reveal">
+        <div class="ch-top"><span class="en">FIT CHECK</span></div>
+        <div class="ch-sub"><span class="ja">サイズ診断</span><h2>サイズ、もう迷わない。</h2></div>
+      </header>
+      <p class="fit-lead reveal">ネットで服を買うときにいちばん不安なのは、サイズが合うかどうか。<br class="pc">身長と体重を入れるだけで、各アイテムのおすすめサイズがわかります。</p>
+      <ol class="fit-steps stagger">
+        <li><b>01</b><strong>体型を入力</strong><span>身長・体重・好きな着方。30秒で終わります</span></li>
+        <li><b>02</b><strong>おすすめサイズが全アイテムに</strong><span>一度入れれば、どの商品にも表示されます</span></li>
+        <li><b>03</b><strong>3Dで着たイメージを確認</strong><span>2サイズを並べて、丈や身幅のちがいも比べられます</span></li>
+      </ol>
+    </div>
+    <div class="fit-card reveal">
+      <p class="fit-card-h">MY SIZE<span>あなたの体型</span></p>
+      <form class="ms-form" id="fit-form" novalidate></form>
+      <button type="button" class="btn primary fit-go" id="fit-go">おすすめサイズを見る →</button>
+      <p class="fit-status" id="fit-status" role="status"></p>
+      <p class="fit-privacy">入力した内容はこのブラウザの中にだけ保存され、どこにも送信されません。<button type="button" id="fit-reset" class="link">入力を消去</button></p>
+    </div>
+  </div>
+</section>
 
 <!-- 商品一覧 -->
 <section class="sec shop" id="items">
@@ -72,9 +102,12 @@
         <button type="button" class="filter" data-cat="tops" role="tab" aria-selected="false">APPAREL</button>
         <button type="button" class="filter" data-cat="socks" role="tab" aria-selected="false">SOCKS</button>
         <button type="button" class="filter" data-cat="goods" role="tab" aria-selected="false">ACCESSORIES</button>
+        <button type="button" class="filter filter-fav" data-cat="fav" role="tab" aria-selected="false">♡ SAVED<span id="fav-count"></span></button>
       </div>
     </div>
+    <p class="ms-bar"><span class="rec-chip">MY SIZE</span><span data-ms-summary></span><a href="#fit">変更</a></p>
     <div class="products" id="products"></div>
+    <p class="fav-empty" id="fav-empty" hidden>お気に入りはまだありません。商品の ♡ を押すと、ここにまとまります。</p>
     <p class="note">※ 商品イラストはイメージです。実際の商品とは色味・デザインが異なる場合があります。</p>
   </div>
 </section>
@@ -84,16 +117,39 @@
   <div class="wrap">
     <header class="ch reveal">
       <div class="ch-top"><span class="en">GUIDE</span></div>
-      <div class="ch-sub"><span class="ja">ご購入について</span><h2>はじめての方へ</h2></div>
+      <div class="ch-sub"><span class="ja">ご購入について</span><h2>販売開始まで、もう少し。</h2></div>
     </header>
-    <ol class="steps reveal stagger">
-      <li><b>01</b><strong>アイテムを選ぶ</strong><p>カラーとサイズを選んで「購入する」を押してください。</p></li>
-      <li><b>02</b><strong>ストアで手続き</strong><p>オンラインストアのページに移動します。お支払い・配送先の入力はストアで行います。</p></li>
-      <li><b>03</b><strong>お届け</strong><p>発送のご連絡はストアからメールでお送りします。</p></li>
-    </ol>
+    <!-- 販売開始後は、ストアに合わせた購入の流れ（01 選ぶ → 02 ストアで手続き → 03 お届け など）に差し替える -->
+    <div class="soon-box reveal">
+      <p class="soon-en">COMING SOON</p>
+      <p><strong>オンラインストアは現在準備中です。</strong><br>販売開始の日程は、YouTube・SNSでお知らせします。掲載中のアイテム・価格は予定のもので、変更になる場合があります。</p>
+    </div>
+    <div class="faq reveal">
+      <h3 class="faq-h">よくある質問</h3>
+      <details>
+        <summary>サイズで迷ったら、どうすればいい？</summary>
+        <p>ページ上の「サイズ診断」に身長と体重を入れると、アイテムごとのおすすめサイズを表示します。各アイテムの「サイズ感を3Dで見る」では、あなたの体型のマネキンに着せて、2サイズを並べて比べることもできます。ゆったり着たいなら大きいほう、すっきり着たいなら小さいほうがおすすめです。</p>
+      </details>
+      <details>
+        <summary>サイズ表の寸法は、どこを測っていますか？</summary>
+        <p>服を平らに置いて測った寸法です。着丈は首の付け根から裾まで、身幅は脇の下の横幅です。各アイテムの「サイズ表」タブに測り方の図があります。手持ちの服を同じように測って入れると、いちばん近いサイズがわかります。</p>
+      </details>
+      <details>
+        <summary>洗濯で縮みますか？</summary>
+        <p>綿素材のアイテムは、乾燥機を使うと縮みやすくなります。裏返してネットに入れて洗い、陰干しするのがおすすめです。各アイテムの「素材・お手入れ」タブもご覧ください。</p>
+      </details>
+      <details>
+        <summary>サイズが合わなかったときの交換はできますか？</summary>
+        <p data-policy="exchange">交換・返品の条件は、販売開始時にストアのページでご案内します。</p>
+      </details>
+      <details>
+        <summary>送料はいくらですか？</summary>
+        <p data-policy="shipping">送料は、販売開始時にストアのページでご案内します。</p>
+      </details>
+    </div>
     <div class="guide-contact reveal">
-      <p>サイズ・在庫・まとめ買い（チームオーダー）などのご相談はお気軽にどうぞ。</p>
-      <a class="btn primary" href="index.html#contact">お問い合わせ →</a>
+      <p>チームオーダーなど、グッズについてのご相談はお気軽にどうぞ。</p>
+      <a class="btn primary" href="index.html?topic=goods#contact">お問い合わせ →</a>
     </div>
   </div>
 </section>
@@ -107,6 +163,79 @@
   </div>
 </footer>
 
-<script src="js/goods.js"></script>
+<!-- 商品の詳細（ドロワー）。中身は js/goods.js で入れる -->
+<div class="pd" id="pd" hidden>
+  <div class="pd-backdrop" data-close></div>
+  <section class="pd-panel" role="dialog" aria-modal="true" aria-labelledby="pd-title" tabindex="-1">
+    <div class="pd-handle" aria-hidden="true"></div>
+    <header class="pd-head">
+      <div>
+        <p class="pd-cat"></p>
+        <h2 id="pd-title"></h2>
+        <p class="pd-price"></p>
+      </div>
+      <button type="button" class="pd-close" data-close aria-label="閉じる">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+      </button>
+    </header>
+    <div class="pd-scroll">
+      <div class="pd-stage">
+        <div class="fit3d">
+          <p class="fit3d-loading">3Dを準備しています…</p>
+          <div class="fit3d-ui">
+            <div class="fit3d-views" role="group" aria-label="向き">
+              <button type="button" data-view="front" aria-pressed="true">正面</button>
+              <button type="button" data-view="side" aria-pressed="false">横</button>
+              <button type="button" data-view="back" aria-pressed="false">背面</button>
+            </div>
+            <div class="fit3d-views" role="group" aria-label="表示範囲">
+              <button type="button" data-frame="up" aria-pressed="true">アップ</button>
+              <button type="button" data-frame="full" aria-pressed="false">全身</button>
+            </div>
+          </div>
+          <div class="fit3d-tags" hidden></div>
+          <p class="fit3d-hint" aria-hidden="true">ドラッグで回転</p>
+          <p class="fit3d-cap"></p>
+        </div>
+        <div class="pd-art"></div>
+        <div class="pd-wear">
+          <div class="pd-wear-row"><span class="p-lbl">SIZE</span><div class="sizes" id="pd-sizes"></div></div>
+          <div class="pd-wear-row pd-cmp-row"><span class="p-lbl">比べる</span><div class="sizes sizes-sm" id="pd-cmp"></div></div>
+        </div>
+      </div>
+      <div class="pd-info">
+        <div class="pd-tabs" role="tablist" aria-label="商品情報">
+          <button type="button" class="pd-tab" role="tab" data-tab="fit" aria-controls="pane-fit">サイズ感</button>
+          <button type="button" class="pd-tab" role="tab" data-tab="chart" aria-controls="pane-chart">サイズ表</button>
+          <button type="button" class="pd-tab" role="tab" data-tab="spec" aria-controls="pane-spec">素材・お手入れ</button>
+        </div>
+        <div class="pd-pane" data-pane="fit" id="pane-fit" role="tabpanel">
+          <div class="pd-ms">
+            <p class="pd-ms-row"><span class="rec-chip">MY SIZE</span><span data-ms-summary></span>
+              <button type="button" class="link pd-ms-toggle" aria-expanded="false" aria-controls="pd-form">変更</button></p>
+            <p class="pd-ms-note">いまは仮の体型で表示しています。「変更」からあなたの身長・体重を入れてみてください。</p>
+            <form class="ms-form ms-compact" id="pd-form" novalidate hidden></form>
+          </div>
+          <div id="pd-fit"></div>
+        </div>
+        <div class="pd-pane" data-pane="chart" id="pane-chart" role="tabpanel" hidden><div id="pd-chart"></div></div>
+        <div class="pd-pane" data-pane="spec" id="pane-spec" role="tabpanel" hidden><div id="pd-spec"></div></div>
+      </div>
+    </div>
+    <footer class="pd-foot">
+      <div class="pd-foot-color"><span class="p-lbl">COLOR<em class="pd-color-name"></em></span><div class="swatches pd-foot-swatches"></div></div>
+      <div class="pd-foot-act">
+        <p class="pd-msg p-msg" role="status"></p>
+        <button type="button" class="fav" aria-label="お気に入り"></button>
+        <button type="button" class="btn primary pd-buy"></button>
+      </div>
+    </footer>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/motion@11.11.17/dist/motion.js"></script>
+<script src="js/fit.js?v=2"></script>
+<script src="js/fit3d.js?v=2"></script>
+<script src="js/goods.js?v=2"></script>
 </body>
 </html>

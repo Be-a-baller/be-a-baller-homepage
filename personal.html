@@ -11,18 +11,35 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,700;0,800;1,800&family=JetBrains+Mono:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Barlow+Condensed:ital,wght@0,500;0,700;0,800;1,800&family=JetBrains+Mono:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/workout.css">
+<link rel="stylesheet" href="css/nav.css">
 </head>
 <body class="t-personal">
 
 <!-- ★ 料金は js/personal.js 冒頭の PLAN で設定（ページ内の料金表と計算機の両方に反映） -->
 
-<header class="bar">
-  <a class="bar-back" href="index.html#workout"><span aria-hidden="true">←</span> BE A BALLER</a>
-  <span class="bar-title">PERSONAL WORKOUT</span>
-  <a class="bar-cta" href="#apply">申し込む</a>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="nav-logo"><b>BE A BALLER</b><span>HALLELUJAH</span></a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav class="nav-links" id="site-nav">
+      <a href="index.html#youtube">YOUTUBE</a>
+      <a href="index.html#coach">COACH</a>
+      <a href="index.html#workout" aria-current="page" class="is-current">WORKOUT</a>
+      <a href="goods.html">GOODS</a>
+      <a href="index.html#sponsors">SPONSORS</a>
+      <a href="index.html#contact">CONTACT</a>
+      <a href="#apply" class="nav-cta">申し込む</a>
+    </nav>
+  </div>
 </header>
+
+<!-- サブバー（ページ名・ワークアウト一覧へ戻る） -->
+<div class="bar">
+  <a class="bar-back" href="index.html#workout"><span aria-hidden="true">←</span> WORKOUT</a>
+  <span class="bar-title">PERSONAL WORKOUT</span>
+</div>
 
 <main>
 
@@ -102,11 +119,7 @@
     <h2>まずは、気軽に相談から。</h2>
     <p>希望の日時・場所・人数・いまの課題を書いて送ってください。</p>
     <div class="apply-actions">
-      <a class="apply-btn" href="index.html#contact">お問い合わせフォームへ <span aria-hidden="true">→</span></a>
-      <div class="apply-mail">
-        <span class="mono" id="mail">be.a.baller.official@gmail.com</span>
-        <button type="button" id="copy">コピー</button>
-      </div>
+      <a class="apply-btn" href="index.html?topic=personal#contact">お問い合わせフォームへ <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
@@ -118,6 +131,7 @@
   <span>© <span id="year">2026</span> ハレルヤ【Be a baller】</span>
 </footer>
 
+<script src="js/nav.js"></script>
 <script src="js/personal.js"></script>
 </body>
 </html>

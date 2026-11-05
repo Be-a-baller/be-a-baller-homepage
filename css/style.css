@@ -399,9 +399,9 @@ button { font: inherit; color: inherit; }
 .sp-cta a { margin-left: 8px; color: var(--accent); font-weight: 700; border-bottom: 1px solid var(--accent); white-space: nowrap; }
 
 /* ---------- Contact ---------- */
-.contact-grid { margin-top: 28px; display: grid; grid-template-columns: 1.5fr 1fr; gap: 24px; align-items: start; }
+.contact-grid { margin-top: 28px; max-width: 760px; }
 .contact-form {
-  display: grid; gap: 18px;
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px;
   padding: clamp(24px, 3vw, 36px); background: var(--glass); border: 1px solid var(--line); border-radius: 8px;
 }
 .contact-form label { display: grid; gap: 6px; font-size: 14px; font-weight: 700; }
@@ -412,25 +412,27 @@ button { font: inherit; color: inherit; }
   padding: 12px 14px; background: #fff; border: 1px solid var(--line); border-radius: 6px;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
+.contact-form :is(input, select, textarea) { width: 100%; min-width: 0; }
 .contact-form textarea { resize: vertical; min-height: 140px; }
 .contact-form :is(input, select, textarea):focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(3, 73, 31, 0.15); }
 .contact-form .btn { justify-self: start; cursor: pointer; }
 .form-error { color: #B3261E; font-size: 13px; font-weight: 700; }
 .form-note { font-size: 12px; color: var(--muted); }
-.mail-card {
-  padding: clamp(24px, 3vw, 36px); border-radius: 8px;
-  background: var(--accent); color: var(--on-accent);
+.contact-form[hidden], .contact-form [hidden] { display: none; }
+.wo-fields { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; padding: 20px; border: 1px dashed var(--line); border-radius: 8px; min-width: 0; }
+.wo-fields legend { padding: 0 8px; font-size: 14px; font-weight: 700; color: var(--accent); }
+.wo-fields legend small { display: block; font-size: 12px; font-weight: 400; color: var(--muted); }
+.wo-fields .row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.contact-form ::placeholder { color: #A9A89C; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.form-done {
+  padding: clamp(28px, 4vw, 48px); border-radius: 8px;
+  background: var(--accent); color: var(--on-accent); box-shadow: var(--shadow-dark);
 }
-.mail-card .lbl { font-family: var(--font-display); font-size: 13px; letter-spacing: 0.3em; opacity: 0.75; }
-.mail-addr { display: block; margin-top: 10px; font-size: clamp(16px, 1.7vw, 20px); font-weight: 700; word-break: break-all; border-bottom: 1px solid rgba(240, 227, 200, 0.4); padding-bottom: 12px; }
-.mail-addr:hover { border-color: var(--on-accent); }
-.copy-btn {
-  margin-top: 16px; padding: 8px 18px; border-radius: 999px; cursor: pointer;
-  background: transparent; border: 1px solid var(--on-accent); color: var(--on-accent);
-  font-size: 13px; font-weight: 700; transition: background 0.2s, color 0.2s;
-}
-.copy-btn:hover { background: var(--on-accent); color: var(--accent); }
-.mail-card p { margin-top: 18px; font-size: 13px; opacity: 0.8; }
+.form-done:focus { outline: none; }
+.form-done .lbl { font-family: var(--font-display); font-size: 13px; letter-spacing: 0.3em; opacity: 0.75; }
+.form-done .big { margin-top: 8px; font-size: clamp(18px, 2vw, 22px); font-weight: 700; }
+.form-done p:last-child { margin-top: 12px; font-size: 14px; opacity: 0.85; }
 .sns-label {
   margin: 56px 0 0; font-family: var(--font-display); font-size: 13px; letter-spacing: 0.3em; color: var(--accent);
   display: flex; align-items: center; gap: 16px;
@@ -488,7 +490,7 @@ button { font: inherit; color: inherit; }
   --lift-ease: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.2s, background 0.2s;
 }
 .yt-lite, .yt-card, .coach-visual, .wo-card, .goods,
-.sp-slot:not(.sp-open), .sns a, .contact-form, .mail-card {
+.sp-slot:not(.sp-open), .sns a, .contact-form {
   box-shadow: var(--shadow);
 }
 
@@ -530,7 +532,7 @@ body::before {
 .ch .ja { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 3px 0 #022F16, 0 6px 12px -4px rgba(var(--sh-c), 0.4); }
 
 /* 緑の面: 上から光が当たっているグラデーション */
-.btn.primary, .ch .ja, .mail-card {
+.btn.primary, .ch .ja {
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.10), rgba(0, 0, 0, 0.10));
 }
 .coach-visual {
@@ -540,7 +542,7 @@ body::before {
     repeating-linear-gradient(135deg, rgba(240, 227, 200, 0.06) 0 2px, transparent 2px 14px),
     var(--accent);
 }
-.coach-visual, .mail-card { box-shadow: var(--shadow-dark); }
+.coach-visual { box-shadow: var(--shadow-dark); }
 .coach-visual .team-shot { box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0 14px 28px -10px rgba(0, 0, 0, 0.55); }
 
 /* ヘッドコーチの写真: カラーのまま大きく、右に文字。触れたときの動きはワークアウト・グッズと同じ（傾き＋浮き上がり＋写真を少し拡大） */
@@ -655,7 +657,7 @@ body::before {
 }
 .vid:hover { box-shadow: none; }
 .vid:hover .yt-lite { box-shadow: var(--shadow-hover); }
-.coach-visual:hover, .mail-card:hover { box-shadow: var(--shadow-dark), 0 40px 60px -20px rgba(var(--sh-c), 0.45); }
+.coach-visual:hover { box-shadow: var(--shadow-dark), 0 40px 60px -20px rgba(var(--sh-c), 0.45); }
 .tilt:hover {
   transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(-6px);
   transition: transform 0.12s linear, box-shadow 0.3s ease, border-color 0.2s, background 0.2s;
@@ -725,7 +727,8 @@ body::before {
   .sp-subs { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
   .sp-sub { aspect-ratio: auto; min-height: 120px; padding: 28px 12px 16px; }
   .sp-main { min-height: 180px; padding: 28px 16px; }
-  .contact-grid { grid-template-columns: 1fr; }
+  .wo-fields .row { grid-template-columns: 1fr; }
+  .wo-fields { padding: 16px; }
   .contact-form .btn { justify-self: stretch; justify-content: center; }
   .sns a { padding: 18px; }
   .sns svg, .sns .note-icon { width: 36px; height: 36px; margin-bottom: 12px; }

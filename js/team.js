@@ -60,16 +60,4 @@ function select(key) {
 }
 select(TEAM_PLANS[0].key);
 
-// メールアドレスをコピー
-const copy = document.getElementById("copy");
-copy.addEventListener("click", async () => {
-  try {
-    await navigator.clipboard.writeText(document.getElementById("mail").textContent);
-    copy.textContent = "コピーしました ✓";
-  } catch {
-    getSelection().selectAllChildren(document.getElementById("mail"));
-  }
-  setTimeout(() => (copy.textContent = "コピー"), 2000);
-});
-
 document.getElementById("year").textContent = new Date().getFullYear();
