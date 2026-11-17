@@ -260,6 +260,12 @@ button { font: inherit; color: inherit; }
 .yt-card strong { display: block; font-size: 18px; }
 .yt-card small { color: var(--muted); font-size: 13px; }
 .yt-card .go { margin-left: auto; font-weight: 700; font-size: 14px; color: var(--accent); white-space: nowrap; }
+/* 記事の図書館へのカード（YouTubeのカードの下に、同じ形で） */
+.lib-card { margin-top: 14px; }
+.lib-card .lib-logo { width: 56px; height: 40px; flex: none; }
+.footer-links { margin-top: 8px; font-size: 13px; }
+.footer-links a { color: inherit; opacity: 0.8; text-decoration: underline; text-underline-offset: 3px; }
+.footer-links a:hover { opacity: 1; }
 
 /* ---------- Coach ---------- */
 .sec-coach { background: rgba(233, 218, 187, 0.45); }

@@ -4,6 +4,8 @@
    ============================================ */
 const LINKS = {
   youtube:  "https://www.youtube.com/@be_a_baller",
+  // 記事の図書館（Be a Baller Library）。アドレスが決まったらここを直す
+  library:  "https://be-a-baller-library.jp/",
   // ワークアウトの3つは各ページに飛ぶので、ここでの設定は不要
   // パーソナル → personal.html（料金は js/personal.js）
   // チームオフェンス／ディフェンス → team-offense.html / team-defense.html（料金は js/team.js）
